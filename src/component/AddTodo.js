@@ -41,6 +41,7 @@ class AddTodo extends Component {
     event.preventDefault();
     if (this.state.content.trim()) {
 
+
       const jsonObject = {
         id: this.state.id,
         task: this.state.content,
@@ -58,7 +59,6 @@ class AddTodo extends Component {
       }).then(res => {
         console.log(res.data.message);
       });
-
       this.props.addTodo(this.state);
       this.setState({
         content: "",
